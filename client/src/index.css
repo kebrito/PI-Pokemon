@@ -4,11 +4,11 @@
   font-weight: 300;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  place-items: center;
+body  
+{
+  background-image: url("/src/assets/images/Background.gif");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
 }

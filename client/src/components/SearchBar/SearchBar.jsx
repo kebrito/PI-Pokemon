@@ -19,7 +19,7 @@ const SearchBar = ({ onSearch }) => {
       <div className={style.inptContainer}>
         <input
           type="text"
-          placeholder="Search pokemon by name"
+          placeholder="Find Pokemon Name"
           value={searchPokemon}
           onChange={handleInputChange}
           className={style.input}

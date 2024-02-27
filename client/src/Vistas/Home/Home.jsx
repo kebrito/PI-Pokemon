@@ -54,15 +54,14 @@ const Home = () => {
   };
 
   return (
-    <div className={style.container}>
-      <div className={style.slctContainer}>
+    <div className={style.ctnBody}>
+      <div className={style.selectContainer}>
         <div className={style.filters}>
           <h3>FILTERS:</h3>
           <select
             onChange={handleFilterByType}
             defaultValue={"ByType"}
-            className={style.slct}
-          >
+            className={style.select}>
             <option value="ByType" disabled="disabled">
               By Type
             </option>
@@ -76,8 +75,7 @@ const Home = () => {
           <select
             onChange={handleFilterByOrigin}
             defaultValue={"ByOrigin"}
-            className={style.slct}
-          >
+            className={style.select}>
             <option value="ByOrigin" disabled="disabled">
               By Origin
             </option>
@@ -87,12 +85,11 @@ const Home = () => {
           </select>
         </div>
         <h3>SORTS:</h3>
-        <div className={style.sorts}>
+        <div className={style.Ssorts}>
           <select
             onChange={handleOrderByName}
             defaultValue={"ByName"}
-            className={style.slct}
-          >
+            className={style.select}>
             <option value="ByName" disabled="disabled">
               By Name
             </option>
@@ -102,8 +99,7 @@ const Home = () => {
           <select
             onChange={handleOrderByAtk}
             defaultValue={"ByATK"}
-            className={style.slct}
-          >
+            className={style.select}>
             <option value="ByATK" disabled="disabled">
               By ATK
             </option>

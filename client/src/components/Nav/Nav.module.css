@@ -1,0 +1,27 @@
+.ctnBody {
+  width: 100%;
+  padding: 20px, 100px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: #e7f526;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+}
+
+.btn {
+  padding: 0.5em 2em;
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  background: transparent;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #2317ce;
+  background: #e4e9f2;
+}

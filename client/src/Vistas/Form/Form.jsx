@@ -12,7 +12,7 @@ const Form = () => {
   const [pokemonCreated, setPokemonCreated] = useState({
     name: "",
     image: "",
-    ps: 0,
+    hp: 0,
     atk: 0,
     def: 0,
     vel: 0,
@@ -95,7 +95,7 @@ const Form = () => {
       setPokemonCreated({
         name: "",
         image: "",
-        ps: 0,
+        hp: 0,
         atk: 0,
         def: 0,
         vel: 0,
@@ -111,7 +111,7 @@ const Form = () => {
   return (
     <>
       <div className={style.container}>
-        <h1 className={style.title}>Create Your Pokemon</h1>
+        <h1 className={style.title}>Your NewPokemon</h1>
         <div className={style.formContainer}>
           <form onSubmit={handleSubmit}>
             <label>
@@ -146,14 +146,14 @@ const Form = () => {
               <h4 className={style.text}>Life Points:</h4>
               <input
                 type="number"
-                id="ps"
-                name="ps"
-                value={pokemonCreated.ps}
+                id="hp"
+                name="hp"
+                value={pokemonCreated.hp}
                 onChange={handleChange}
                 className={style.inputNumber}
               />
             </label>
-            {errors.ps && <span>{errors.ps}</span>}
+            {errors.hp && <span>{errors.hp}</span>}
             <br />
             <label>
               <h4 className={style.text}>ATK Points:</h4>

@@ -1,4 +1,4 @@
-.container {
+.ctnBody {
   margin-top: 7em;
   display: flex;
   flex-direction: column;
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.slctContainer {
+.selectContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -18,22 +18,24 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: #090615;
 }
 
-.sorts {
+.Ssorts {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: #f8f8f4;
 }
 
-.slct {
+.select {
   width: 10em;
   margin: 1em;
   padding: 0.5em;
-  background: #0042ac;
-  color: #e8e8e8;
-  border: solid #0042ac;
+  background: white;
+  color: #4b07f6;
+  border: none;
   border-radius: 0.4em;
 }
 
@@ -41,13 +43,13 @@
   width: 10em;
   margin: 1em;
   padding: 0.2em;
-  background-color: #0042ac;
-  color: #e8e8e8;
-  border: solid transparent;
-  border-radius: 0.4em;
+  background-color: #d9d133;
+  color: rgb(60, 7, 207);
+  border: none;
+  border-radius: 0.2em;
 }
 
 .btn:hover {
   border: solid #e8e8e8;
-  background: #022d76;
+  background: #e5ebe8;
 }

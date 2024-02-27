@@ -22,7 +22,7 @@ module.exports = (sequelize) => {
         isUrl: true,
         allowNull: false,
       },
-      ps: {
+      hp: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
