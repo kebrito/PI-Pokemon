@@ -1,12 +1,11 @@
-.container {
+.ctnBody {
   margin-top: 3em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.btn {
+  }
+  .btn {
   width: 5em;
   height: 2.5em;
   margin-right: 70em;
@@ -42,19 +41,20 @@
   grid-area: stats;
 }
 
-.statsN {
-  grid-area: statsN;
+.mStats {
+  grid-area: mStats;
 }
 
-.infoContainer {
+.ctnInfo {
   width: 50vw;
   height: 60vh;
   padding: 5em;
   margin-right: 20em;
   margin-bottom: 2em;
   background: #e7f526;
-  border: solid #e1e1e1 2px;
-  border-radius: 0.2em;
+  border: solid 0.3em rgb(5, 24, 23);
+  box-shadow: 2px 2px 25px 13px #e1e1e1;
+  border-radius: 0.3em;
   display: grid;
   grid-template-columns: repeat(15em);
   grid-template-rows: repeat(12.5em);
@@ -62,47 +62,61 @@
     "id . . name"
     "img img types types"
     "img img stats stats"
-    "img img statsN statsN";
+    "img img mStats mStats";
   align-content: center;
 }
 
 .id {
   text-align: start;
   font-size: large;
+  color: blue;
 }
 
 .name {
   text-align: start;
   font-size: large;
   text-transform: uppercase;
+  color: blue;
 }
 
-.img {
-  width: 25em;
-  height: 25em;
-  margin: 0.5em;
+.imag {
+    width: 20em;
+    height: 12em;
+    animation: moverImagen 5s linear infinite; /* Define la animación */
+}
+
+@keyframes moverImagen {
+    0% {
+        transform: translateX(0); /* La imagen empieza en su posición original */
+    }
+    100% {
+        transform: translateX(50%); /* La imagen se mueve completamente hacia la derecha */
+    }
 }
 
 .types {
+  color: blue;
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   font-size: medium;
 }
 
 .stats {
+  color: blue;
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
 }
 
 .stat {
+  color: blue;
   margin: 0.5em;
   font-size: medium;
 }
 
-.statsN {
+.mStats {
   display: flex;
   flex-direction: row;
 }

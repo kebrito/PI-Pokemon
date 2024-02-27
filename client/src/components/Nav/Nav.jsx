@@ -8,6 +8,9 @@ const Nav = ({ onSearch }) => {
   return (
     <div>
       <header className={style.ctnBody}>
+        <Link to={"/"}>
+          <button className={style.btn}>Landing</button>
+        </Link>
         <Link to={"/home"}>
           <button className={style.btn}>Home</button>
         </Link>

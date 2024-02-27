@@ -20,18 +20,18 @@ const Detail = () => {
 
   return (
     <>
-      <div className={style.container}>
+      <div className={style.ctnBody}>
         <Link to={"/home"}>
           <button className={style.btn}>BACK</button>
         </Link>
         {pokemon.name ? (
-          <div className={style.infoContainer}>
+          <div className={style.ctnInfo}>
             <h3 className={style.id}>ID: {pokemon.id}</h3>
             <h2 className={style.name}>Name: {pokemon.name}</h2>
             <img
               src={pokemon?.image}
               alt="pokemonImage"
-              className={style.img}
+              className={style.imag}
             />
             <h2 className={style.types}>
               {" "}
@@ -45,7 +45,7 @@ const Detail = () => {
               <h3 className={style.stat}>ATK: {pokemon.atk}</h3>
               <h3 className={style.stat}>DEF: {pokemon.def}</h3>
             </div>
-            <div className={style.statsN}>
+            <div className={style.mStats}>
               {pokemon.vel ? (
                 <h3 className={style.stat}>VEL: {pokemon.vel}</h3>
               ) : (

@@ -1,23 +1,23 @@
-.ctnBody
- {
+.ctnBody {
   margin-top: 9em;
   margin-right: 50em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .imag {
   width: 12em;
-  height: 6em;
+  height: 8em;
 }
 
 .welcome {
   color: rgb(54, 38, 193);
   align-items: center;
+  background-color: #c5c175;
   
-
 }
 
 .btn {

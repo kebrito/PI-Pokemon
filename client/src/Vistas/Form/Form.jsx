@@ -111,7 +111,7 @@ const Form = () => {
   return (
     <>
       <div className={style.container}>
-        <h1 className={style.title}>Your NewPokemon</h1>
+        <h1 className={style.title}>Your New Pokemon</h1>
         <div className={style.formContainer}>
           <form onSubmit={handleSubmit}>
             <label>

@@ -15,7 +15,7 @@ function App() {
 
   const onSearch = async (pokemonName) => {
     if (!pokemonName) {
-      alert("Must,Pokemon name");
+      alert("Debes digitar el nombre del Pokemon");
       return;
     }
 
