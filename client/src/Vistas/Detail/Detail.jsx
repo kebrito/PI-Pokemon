@@ -33,8 +33,7 @@ const Detail = () => {
               alt="pokemonImage"
               className={style.imag}
             />
-            <h2 className={style.types}>
-              {" "}
+            <h2>
               Types:
               {pokemon.types.map((t) => {
                 return ` ${t}`;

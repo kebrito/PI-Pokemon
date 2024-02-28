@@ -34,6 +34,7 @@ const Form = () => {
 
     try {
       const { data } = await axios.post(URL, pokemon);
+      alert("El pokemon ha sido creado");
       return data;
     } catch (error) {
       console.log(error.response.data.error);

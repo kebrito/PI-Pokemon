@@ -24,7 +24,7 @@ function reducer(state = initialState, { type, payload }) {
     case GET_POKEMONS_BY_NAME:
       return {
         ...state,
-        allPokemons: payload,
+        // allPokemons: payload,
         pokemons: payload,
       };
     case GET_TYPES:

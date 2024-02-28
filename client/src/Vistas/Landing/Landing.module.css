@@ -3,9 +3,8 @@
   margin-right: 50em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  
 }
 
 .imag {
@@ -17,20 +16,22 @@
   color: rgb(54, 38, 193);
   align-items: center;
   background-color: #c5c175;
-  
 }
 
 .btn {
-  padding: 0.5em;
-  font-family: Arial, sans-serif;
+  padding: 6em 2em 5em;
+  font-family: Arial;
   font-size: 1.2em;
-  background: #d9d133;
+  background: url("../../assets/images/PokemonBtn.png") no-repeat center center;
+  background-size: contain; /* Para que la imagen se ajuste al tamaño del botón */
   border: none;
-  border-radius: 0.2em;
+  border-radius: 0.5em;
   cursor: pointer;
+
 }
 
 .btn:hover {
-  color: hsl(0, 0%, 85%);
-  background: #2e00ac;
+  color: hsl(247, 97%, 31%);
+  
+
 }
