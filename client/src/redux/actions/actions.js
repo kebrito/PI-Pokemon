@@ -7,7 +7,22 @@ import {
   FILTER_BY_ORIGIN,
   ORDER_BY_NAME,
   ORDER_BY_ATK,
+  GET_CURRENT_POKEMONS,
 } from "./actions-types";
+
+export const getCurrentPokemons = (pokemons, currentPage, cardsPerPage) => {
+  return (dispatch) => {
+    const startIndex = (currentPage - 1) * cardsPerPage;
+    const endIndex = startIndex + cardsPerPage;
+    const currentPokemons = pokemons.slice(startIndex, endIndex);
+
+    dispatch({
+      type: GET_CURRENT_POKEMONS,
+      payload: currentPokemons,
+    });
+  };
+};
+
 
 export const getPokemons = () => {
   const URL = "http://localhost:3001/pokemons";

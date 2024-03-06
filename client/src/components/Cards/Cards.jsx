@@ -1,15 +1,21 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import Pagination from "../Pagination/Pagination";
 import style from "./Cards.module.css";
 
-const Cards = ({ pokemons }) => {
+const Cards = ({ pokemons, currentPage, setCurrentPage }) => {
   const cardsXPage = 12;
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPokemons, setCurrentPokemons] = useState([]);
 
-  const indexOfLastCard = currentPage * cardsXPage;
-  const indexOfFirstCard = indexOfLastCard - cardsXPage;
-  const currentPokemons = pokemons?.slice(indexOfFirstCard, indexOfLastCard);
+  useEffect(() => {
+    const indexOfLastCard = currentPage * cardsXPage;
+    const indexOfFirstCard = indexOfLastCard - cardsXPage;
+    const currentPokemonsSlice = pokemons.slice(
+      indexOfFirstCard,
+      indexOfLastCard
+    );
+    setCurrentPokemons(currentPokemonsSlice);
+  }, [currentPage, pokemons]);
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -18,13 +24,13 @@ const Cards = ({ pokemons }) => {
   return (
     <div>
       <div className={style.ctnBody}>
-        {currentPokemons?.map((pokemon) => (
+        {currentPokemons.map((pokemon) => (
           <Card key={pokemon.id} pokemon={pokemon} />
         ))}
       </div>
       <Pagination
         cardsXPage={cardsXPage}
-        totalCards={pokemons?.length || 0}
+        totalCards={pokemons.length}
         currentPage={currentPage}
         onPageChange={handlePageChange}
       />

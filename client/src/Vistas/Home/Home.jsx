@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   filterByOrigin,
@@ -14,8 +14,28 @@ import style from "./Home.module.css";
 const Home = () => {
   const dispatch = useDispatch();
   const pokemons = useSelector((state) => state.pokemons);
-
   const types = useSelector((state) => state.types);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [previousPage, setPreviousPage] = useState(1); // Nuevo estado para almacenar la página actual antes de aplicar el filtro
+
+  const handleFilterByType = (event) => {
+    setCurrentPage(1); // Restablecer la página actual al aplicar el filtro
+    dispatch(filterByType(event.target.value));
+  };
+
+  const handleFilterByOrigin = (event) => {
+    setCurrentPage(1); // Restablecer la página actual al aplicar el filtro
+    dispatch(filterByOrigin(event.target.value));
+  };
+
+  const handleOrderByName = (event) => {
+    dispatch(orderByName(event.target.value));
+  };
+
+  const handleOrderByAtk = (event) => {
+    dispatch(orderByAtk(event.target.value));
+  };
 
   useEffect(() => {
     if (pokemons.length === 0) {
@@ -35,22 +55,6 @@ const Home = () => {
     } else {
       alert("All pokemon loaded!");
     }
-  };
-
-  const handleFilterByType = (event) => {
-    dispatch(filterByType(event.target.value));
-  };
-
-  const handleFilterByOrigin = (event) => {
-    dispatch(filterByOrigin(event.target.value));
-  };
-
-  const handleOrderByName = (event) => {
-    dispatch(orderByName(event.target.value));
-  };
-
-  const handleOrderByAtk = (event) => {
-    dispatch(orderByAtk(event.target.value));
   };
 
   return (
@@ -112,7 +116,12 @@ const Home = () => {
       <button onClick={resetPokemons} className={style.btn}>
         All Pokemons
       </button>
-      <Cards pokemons={pokemons} />
+      <Cards
+        pokemons={pokemons}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage} // Pasar la función para actualizar la página actual al componente Cards
+        previousPage={previousPage} // Pasar la página anterior al componente Cards
+      />
     </div>
   );
 };
